@@ -17,10 +17,10 @@ async def on_ready():
     json_data = json.loads(response.text)
 
     embedMsg = discord.Embed()
-    embedMsg.add_field(name = "Dolar", value = str(1/json_data['data']['USD'])[0:6])
+    embedMsg.add_field(name = "US Dollars", value = str(1/json_data['data']['USD'])[0:6])
     embedMsg.add_field(name = "Euro", value = str(1/json_data['data']['EUR'])[0:6])
-    embedMsg.add_field(name = "Sterlin", value = str(1/json_data['data']['GBP'])[0:6])
-    embedMsg.title = "**Döviz Kuru**"
+    embedMsg.add_field(name = "Pound Sterling", value = str(1/json_data['data']['GBP'])[0:6])
+    embedMsg.title = "**Exchange Rate**"
     embedMsg.colour = 0x00FF00
 
     await channel.send(embed=embedMsg)
