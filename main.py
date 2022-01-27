@@ -31,9 +31,19 @@ async def on_ready():
     json_data = json.loads(response.text)
 
     embedMsg = discord.Embed()
-    embedMsg.add_field(name = "US Dollars", value = str(1/json_data['data']['USD'])[0:6])
+    embedMsg.add_field(name = "Turkish Lira", value = str(1/json_data['data']['TRY'])[0:6])
+    embedMsg.add_field(name = "US Dollar", value = str(1/json_data['data']['USD'])[0:6])
     embedMsg.add_field(name = "Euro", value = str(1/json_data['data']['EUR'])[0:6])
     embedMsg.add_field(name = "Pound Sterling", value = str(1/json_data['data']['GBP'])[0:6])
+    embedMsg.add_field(name = "Canadian Dollar", value = str(1/json_data['data']['CAD'])[0:6])
+    embedMsg.add_field(name = "Australian Dollar", value = str(1/json_data['data']['AUD'])[0:6])
+    embedMsg.add_field(name = "Japanese Yen", value = str(1/json_data['data']['JPY'])[0:6])
+    embedMsg.add_field(name = "Russian Ruble", value = str(1/json_data['data']['RUB'])[0:6])
+    embedMsg.add_field(name = "United Arab Emirates Dirham", value = str(1/json_data['data']['AED'])[0:6])
+    embedMsg.add_field(name = "Mexican Peso", value = str(1/json_data['data']['MXN'])[0:6])
+    embedMsg.add_field(name = "Chinese Yuan", value = str(1/json_data['data']['CNY'])[0:6])
+    embedMsg.add_field(name = "Bitcoin", value = str(1/json_data['data']['BTC'])[0:6])
+    embedMsg.add_field(name = "Etherum", value = str(1/json_data['data']['ETH'])[0:6])
     embedMsg.title = "**Exchange Rate**"
     embedMsg.colour = 0x00FF00
 
